@@ -1,0 +1,30 @@
+run:
+  seed: 42
+  output_dir: data
+  run_id: base_run
+
+data:
+  n_conversations: 1200
+  start_date: "2026-01-01"
+  days: 45
+  multi_intent_ratio: 0.15
+  incident_spike_ratio: 0.08
+
+embed:
+  model: hash-v1
+  dim: 128
+
+project:
+  n_neighbors: 25
+  min_dist: 0.08
+  metric: cosine
+
+cluster:
+  min_cluster_size: 25
+  min_samples: 8
+
+neighbors:
+  k: 10
+
+export:
+  format: auto
